@@ -1,0 +1,542 @@
+
+<!-- CAHİT ÇELEBİ TARAFINDAN HAZIRLANMIŞTIR -->
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>CELEBİ Teknoloji | Teknolojide Emin Adımlarla.</title>
+</head>
+
+<body>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bebas+Neue&family=Cinzel:wght@700&family=Kanit:wght@300&family=Koulen&family=Montserrat:wght@500&family=Mukta&family=Poppins&family=Quicksand:wght@600&family=Roboto+Condensed&family=Roboto+Mono&family=Roboto+Slab&family=Roboto:wght@900&display=swap');
+
+        body,
+        html {
+            background: black;
+            height: 100%;
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .celebitech-home-page {
+            width: auto;
+            height: 100%;
+        }
+
+        .celebitech-home-page-nav-header {
+            background: transparent;
+            width: auto;
+            height: 500px;
+        }
+
+        /* Genel Taglar */
+        a {
+            text-decoration: none;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        /* Genel Taglar */
+
+        nav {
+            background: transparent;
+            width: 100%;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: center;
+            position: fixed;
+            z-index: 100;
+        }
+
+        nav h2,
+        p,
+        a,
+        li,
+        ul,
+        h4 {
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul {
+            float: right;
+            line-height: 50px;
+            word-spacing: 2rem;
+        }
+
+        nav ul li {
+            display: inline-block;
+            line-height: 50px;
+        }
+
+        nav a {
+            color: whitesmoke;
+            font-size: 14px;
+        }
+
+        header {
+            width: auto;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            color: white;
+        }
+
+        .hover-underline-animation {
+            display: inline-block;
+            position: relative;
+        }
+
+        .hover-underline-animation:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: whitesmoke;
+            transform-origin: center;
+            transition: transform 0.30s ease-out;
+        }
+
+        .hover-underline-animation:hover:after {
+            transform: scaleX(1);
+            transform-origin: center;
+        }
+
+        .hover-underline-animation:focus:after {
+            transform: scaleX(1);
+            transform-origin: center;
+            color: whitesmoke;
+        }
+
+        .hero-image {
+            background: url("images/pexels-clive-kim-6307488.jpg");
+            height: 100%;
+            animation: image 10s infinite alternate;
+            -webkit-animation: image 10s infinite alternate;
+            -moz-animation: image 10s infinite alternate;
+        }
+
+        .celebitech-home-page-hero-image-text {
+            color: white;
+            font-size: 40px;
+            margin-top: 15%;
+        }
+
+        .logo {
+            text-align: center;
+        }
+
+        .contact {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            bottom: 0;
+            left: 0;
+        }
+
+        .btn a {
+            color: white;
+            padding: 5px;
+            padding-left: 5rem;
+            padding-right: 5rem;
+            border: 3px solid white;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .btn a:hover {
+            background: white;
+            color: rgb(19, 19, 19);
+            transform: none;
+        }
+
+        .btn {
+            text-align: center;
+            line-height: 25px;
+        }
+
+        .logo h4 {
+            font-size: 20px;
+            padding: 0;
+        }
+
+        #section-about {
+            background: white;
+            height: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+
+        #section-home {
+            background: url("images/pexels-clive-kim-6307488.jpg");
+            height: 100%;
+            animation: image 10s infinite alternate;
+            -webkit-animation: image 10s infinite alternate;
+            -moz-animation: image 10s infinite alternate;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+
+        #section-about h2 {
+            font-size: 25px;
+            margin: 0;
+            color: rgb(53, 53, 53);
+        }
+
+        #section-about p {
+            font-size: 15px;
+            margin-top: 1rem;
+            color: rgb(53, 53, 53);
+        }
+
+        .text-title {
+            text-align: center;
+            padding-top: 5rem;
+        }
+
+        .img {
+            background-image: linear-gradient(to top, black, transparent, transparent, transparent, #ffffff), url("images/pexels-errin-casano-2356071.jpg");
+            height: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+
+        @keyframes image {
+            to {
+                background: url("images/pexels-clive-kim-6307488.jpg");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                position: relative;
+            }
+
+            from {
+                background: url("images/pexels-taryn-elliott-4840134.jpg");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                position: relative;
+            }
+        }
+
+        .elips {
+            margin-left: 20rem;
+            margin-right: 20rem;
+        }
+
+        #section-ourgoals {
+            background: black;
+            height: 100%;
+
+        }
+
+        .btn-black {
+            color: rgb(20, 20, 20);
+            padding: 5px;
+            padding-left: 5rem;
+            padding-right: 5rem;
+            border: 3px solid black;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .btn-black:hover {
+            background: rgb(20, 20, 20);
+            color: whitesmoke;
+            transform: none;
+        }
+
+        .inf {
+            display: flex;
+            justify-content: center;
+        }
+
+        .inf h2,
+        p {
+            padding-left: 1rem;
+            padding-right: 1rem;
+
+        }
+
+        @media only screen and (max-width: 600px) {
+            body {
+                background-color: lightblue;
+            }
+            .desktop{
+                display: none;
+            }
+            .logo {
+                margin-top: 10rem;
+            }
+            .btn a{
+                margin-top: 1rem;
+            }
+            .elips{
+                margin-left: 0rem;
+                margin-right: 0rem;
+            }
+
+        }
+
+        @media only screen and (min-width: 600px) {
+            body {
+                background-color: lightblue;
+            }
+            .hamburger{
+                display: none;
+            }
+            .topnav{
+                display: none;
+            }
+        }
+
+
+        .topnav {
+                overflow: hidden;
+                width: 100%;
+                background-color: rgba(240, 0, 0, 0);
+                position: fixed;
+                z-index: 5;
+                animation: navbar-anim;
+                animation-duration: 2s;
+            }
+
+
+            .topnav #myLinks {
+                background: red;
+                display: none;
+                transition: all .1s ease-in-out;
+                animation: media-navbar-anim;
+                animation-duration: 1s;
+                animation-timing-function: ease-in-out;
+                margin-left: 2rem;
+                margin-right: 2rem;
+                border-radius: 2px;
+                box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.2);
+            }
+
+            .topnav a {
+                color: white;
+                padding: 10px 10px;
+                text-decoration: none;
+                font-size: 15px;
+                display: block;
+                left: auto;
+                right: auto;
+                position: relative;
+                transition: all .1s ease-in-out;
+                text-align: left;
+            }
+
+            .hamburger {
+                position: fixed;
+                z-index: 100;
+                top: 1.2rem;
+                right: 1rem;
+                left: 1rem;
+                padding: 4px;
+                color: whitesmoke;
+                border: black solid 0;
+                background: rgba(255, 255, 255, 0);
+                cursor: pointer;
+            }
+
+            .closeIcon {
+                display: none;
+            }
+
+            .menu {
+                height: 50%;
+                position: fixed;
+                transform: translateY(-100%);
+                transition: transform 0.2s;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                z-index: 99;
+                background: rgb(14, 14, 14);
+                color: white;
+                list-style: none;
+                margin-top: 5rem;
+                padding-top: 5rem;
+                box-shadow: 10px 10px 2px 1px rgba(0, 0, 0, 0.2);
+            }
+
+            .showMenu {
+                transform: translateY(0);
+            }
+
+            #nav {
+                height: 20px;
+                line-height: 0px;
+            }
+
+            .topnav a.icon {
+                background: rgba(0, 0, 0, 0);
+                display: block;
+                position: absolute;
+                right: 0;
+                top: 0;
+                line-height: 20px;
+                text-align: center  ;
+                color: black;
+
+            }
+
+            .topnav a:hover {
+                background-color: rgba(10, 10, 10, 0.911);
+            }
+
+            .active {
+                background-color: #3333;
+                color: black;
+
+            }
+    </style>
+
+    <div class="celebitech-home-page">
+        <section id="section-home">
+            <div class="hero-image"><br>
+                <nav class="desktop">
+                    <ul id="links">
+                        <li><a class="hover-underline-animation" href="#section-home">Anasayfa</a></li>
+                        <li><a class="hover-underline-animation" href="#section-about">Hakkımızda</a></li>
+                        <li><a class="hover-underline-animation" href="#section-ourgoals">Hedeflerimiz</a></li>
+                        <li><a class="hover-underline-animation" href="#section-home">Kariyer</a></li>
+                        <li><a class="hover-underline-animation" href="#section-home">Sponsorlar</a></li>
+                        <li><a class="hover-underline-animation" href="#section-home">İletişim</a></li>
+                    </ul>
+                </nav>
+
+                <div class="mobile-container">
+                    <div class="topnav">
+
+                        <div id="links" class="menu">
+                            <a class="menuItem" href="#section-home">Anasayfa</a>
+                            <a class="menuItem" href="#section-about">Hakkımızda</a>
+                            <a class="menuItem" href="#section-ourgoals">Başarılar</a>
+                            <a class="menuItem" href="#section-home">Sponsorlar</a>
+                            <a class="menuItem" href="#section-home">First</a>
+                            <a class="menuItem" href="#section-home">İletişim</a>
+                        </div>
+                        <button class="hamburger">
+                            <!-- material icons https://material.io/resources/icons/ -->
+                            <i class="menuIcon material-icons">menu</i>
+                            <i class="closeIcon material-icons">close</i>
+                        </button>
+                    </div>
+
+                <div class="celebitech-home-page-hero-image-text">
+                    <div class="logo">
+                        <h2>CELEBI Teknoloji</h2>
+                    </div>
+                    <div class="btn">
+                        <a id="btn" href="#">Bize Ulaş</a>
+                        <!-- <a id="btn" href="#">Bağış Gönder</a> -->
+                    </div>
+                </div>
+        </section>
+    </div>
+    <section id="section-about">
+        <div class="text-title">
+            <h2>| Biz Kimiz ?</h2>
+            <p class="elips">Cahit ÇELEBİ tarafından 2021 yılında kurulan CELEBİ Teknoloji , dünya çapında bir
+                mühendislik ve teknoloji markasıdır. Merkezi İstanbul, Türkiye’de bulunan CELEBİ Teknoloji,
+                iştirakleri aracılığıyla hizmet vermektedir.
+            </p><br>
+            <div class="inf">
+                <h2>1 <br>
+                    <p>Çalışan</p>
+                </h2>
+                <h2>1 <br>
+                    <p>Yönetici</p>
+                </h2>
+            </div><br>
+            <br>
+            <h2>| Cahit CELEBI</h2>
+            <p class="elips">2008 yılında İstanbul Avcılar'da dünyaya geldi. İlkokulu Necla Görer İlkokulunda okudu.
+                Ortaokulu Yusuf Özvatan Ortaokulunda bitirip Borusan Asım Kocabıyık Mesleki ve Teknik Anadolu Lisesinde
+                eğitim görmeye başladı. 2020 yılında yazılıma ilgi duydu ve kendini bu alanda geliştirme arzusu ile 2021
+                yılında CELEBİ Teknolojiyi kurdu.</p><br>
+            <a class="btn-black" href="#">İletişime Geç</a><br><br>
+        </div>
+
+    </section>
+    </div>
+    <div class="img"></div>
+    </div>
+    <!-- <section id="section-ourgoals">
+
+    </section> -->
+
+
+
+</body>
+
+</html>
+
+<script>
+    $('#links a').on('click', function (e) {
+
+        var href = $(this).attr('href');
+
+        $('html, body').animate({
+            scrollTop: $(href).offset().top
+        }, '300');
+        e.preventDefault();
+
+    });
+</script>
+
+<script>
+    const menu = document.querySelector(".menu");
+    const menuItems = document.querySelectorAll(".menuItem");
+    const hamburger = document.querySelector(".hamburger");
+    const closeIcon = document.querySelector(".closeIcon");
+    const menuIcon = document.querySelector(".menuIcon");
+
+    function toggleMenu() {
+        if (menu.classList.contains("showMenu")) {
+            menu.classList.remove("showMenu");
+            closeIcon.style.display = "none";
+            menuIcon.style.display = "block";
+        } else {
+            menu.classList.add("showMenu");
+            closeIcon.style.display = "block";
+            menuIcon.style.display = "none";
+        }
+    }
+
+    hamburger.addEventListener("click", toggleMenu);
+
+
+</script>
+<script>
+    menuItems.forEach(
+        function (menuItem) {
+            menuItem.addEventListener("click", toggleMenu);
+        }
+    )
+</script>
+<!-- CAHİT ÇELEBİ TARAFINDAN HAZIRLANMIŞTIR -->
